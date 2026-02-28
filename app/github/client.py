@@ -7,8 +7,8 @@ class GithubClient:
 
     def __init__(self):
         self.headers = {
-            "Authorization": f"Bearer {settings.GITHUB_TOKEN}",
-            "Accept": "application/vnd.github.v3+json",
+            "Authorization": f"Bearer {settings.GITHUB_TOKEN}",#header → how you prove who you are to any API
+            "Accept": "application/vnd.github.v3+json",#header → what format you want back
         }
 
     def get(self, url: str):
@@ -25,3 +25,7 @@ class GithubClient:
         response.raise_for_status()
         return response.text
 
+    def post(self, url: str, json: dict):
+        response = httpx.post(f"{BASE_URL}{url}", headers=self.headers, json=json)
+        response.raise_for_status()
+        return response.json()
