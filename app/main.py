@@ -17,3 +17,7 @@ app.include_router(github_router)
 @app.get("/")
 def root():
     return {"status": "ReviewPilot API running"}
+
+@app.get("/health")
+def health():
+    return {"status": "ReviewPilot API running"}

@@ -62,7 +62,8 @@ This project demonstrates how LLMs can:
 
 **Frontend (Demo UI)**
 
-* React + Vite
+* Static HTML
+* Vanilla JavaScript
 * TailwindCSS
 
 ---
@@ -106,7 +107,7 @@ GROQ_API_KEY=your_key
 GITHUB_TOKEN=your_token
 ```
 
-Run the server:
+Run the backend:
 
 ```bash
 uvicorn app.main:app --reload
@@ -116,11 +117,13 @@ uvicorn app.main:app --reload
 
 ### 3️⃣ Frontend setup
 
+Run the frontend:
+
 ```bash
-cd ui
-npm install
-npm run dev
+python frontend-new/serve.py
 ```
+
+The frontend will be available at `http://127.0.0.1:5500/` and will call the backend at `http://127.0.0.1:8000/review`.
 
 ---
 
