@@ -7,6 +7,7 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;0,800;1,400&family=Lato:wght@400;700;900&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="./config.js"></script>
 <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
@@ -387,9 +388,9 @@
 </footer>
 
 <script>
-    const API_BASE_URL = window.location.port === "8000"
-        ? window.location.origin
-        : "http://127.0.0.1:8000";
+    const API_BASE_URL = window.REVIEWPILOT_CONFIG && window.REVIEWPILOT_CONFIG.API_BASE_URL
+        ? window.REVIEWPILOT_CONFIG.API_BASE_URL
+        : (window.location.port === "8000" ? window.location.origin : "http://127.0.0.1:8000");
     const API_URL = API_BASE_URL + "/review";
 
     const form = document.getElementById("review-form");
