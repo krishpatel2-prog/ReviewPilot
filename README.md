@@ -4,6 +4,8 @@ ReviewPilot is an AI-powered code review agent that analyzes GitHub pull request
 
 It transforms LLM reasoning into a real developer workflow.
 
+https://github.com/user-attachments/assets/d34a9f5c-785d-44ca-96b2-9fb1dd4efc5c
+
 Live Demo: https://reviewpilot-frontend.onrender.com
 ---
 
