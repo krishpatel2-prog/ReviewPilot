@@ -18,7 +18,7 @@ Live Demo: https://reviewpilot-frontend.onrender.com
 * 📌 Structured PR summary
 * 🧭 Multiple issue detection in a single run
 * 🎯 Demo-ready UI for running reviews
-https://drive.google.com/file/d/10Qka1pSi9_ZOHSbjWvxWTCSJHdViHviN/view
+
 ---
 
 ## 🧠 Why ReviewPilot?
